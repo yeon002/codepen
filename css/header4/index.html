@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Layout Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+	color: #000;
+}
+#header {
+	background-color: #263e3e;
+}
+#header .inner {
+	position: relative;
+	width: 1260px;
+	height: 70px;
+	margin: 0 auto;
+	text-align: center;
+}
+#header .inner .logo {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#header .inner .banner {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0;
+}
+#header .inner .banner li {
+	display: inline-block;
+	margin-right: 20px;
+}
+#header .inner .banner li:last-child {
+	margin-right: 0px;
+}
+#header .inner .banner a {
+	display:block;
+	font-size: 14px;
+	color: #fff;
+	line-height: 32px;
+	padding: 0 13px;
+	border: 1px solid #fff;
+}
+/* GNB */
+nav {
+	text-align: center;
+	height: 70px;
+
+}
+nav > ul > li {
+	display: inline-block;
+	position: relative;
+}
+nav > ul > li > a {
+	position: relative;
+	display: block;
+	line-height: 70px;
+	font-size: 14px;
+	color: #fff;
+	padding: 0 20px;
+}
+nav li ul {
+	display: none;
+	position: absolute;
+	width: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+nav li li {
+	border-top: 1px solid rgba(0,0,0,.5);
+}
+nav li li a {
+	display: block;
+	background-color: #263e3e;
+	color: #fff;
+	font-size: 14px;
+	text-align: left;
+	padding: 0 20px;
+	line-height: 40px;
+}
+nav > ul > li:hover ul {
+	display: block;
+}
+/* underline */
+nav > ul > li > a::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	background-color: #4d6c6c;
+	width: 100%;
+	height: 5px;
+	transform: scaleX(0);
+	transition: transform 0.3s;
+}
+nav > ul > li > a:hover::before {
+	transform: scaleX(1);
+} 
+</style>
+</head>
+
+<body>
+	<header id="header">
+		<div class="top">
+		</div>
+		<div class="inner">
+			<div class="logo">
+				<h1><a href=""><img src="images/logo.png" alt="logo"></a></h1>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="">BRAND STORY</a>
+						<ul>
+							<li><a href="">브랜드 소개</a></li>
+							<li><a href="">모델소개</a></li>
+							<li><a href="">파크랜드 AD</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">STYLE</a>
+						<ul>
+							<li><a href="">LOOKBOOK</a></li>
+							<li><a href="">COORDI BOOK</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">STORE</a>
+						<ul>
+							<li><a href="">매장검색</a></li>
+							<li><a href="">매장개설문의</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">NEWS&EVENT</a>
+						<ul>
+							<li><a href="">NEWS</a></li>
+							<li><a href="">EVENT</a></li>
+							<li><a href="">PRESS</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">FOCUS ON</a>
+						<ul>
+							<li><a href="">패션노하우</a></li>
+							<li><a href="">월페이퍼</a></li>
+							<li><a href="">ON-AIR</a></li>
+							<li><a href="">드림옷장</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">C/S CENTER</a>
+						<ul>
+							<li><a href="">멤버스 가입</a></li>
+							<li><a href="">A/S 안내</a></li>
+							<li><a href="">고객 상담</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div class="banner">
+				<ul>
+					<li><a href="">FAMILY BRAND</a></li>
+					<li><a href="">ONLINE SHOP</a></li>
+				</ul>
+			</div>
+	</div>
+	</header>
+</body>
+</html>
